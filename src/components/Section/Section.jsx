@@ -1,4 +1,5 @@
 import styled from './Section.module.css';
+import PropTypes from 'prop-types';
 const Section = ({ title, children }) => {
   return (
     <section className={styled.section}>
@@ -6,5 +7,8 @@ const Section = ({ title, children }) => {
       {children}
     </section>
   );
+};
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 export default Section;

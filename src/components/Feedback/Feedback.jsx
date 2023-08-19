@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import styled from './Feedback.module.css';
+import PropTypes from 'prop-types';
 const Feedback = ({ options, onLeaveFeedback }) => {
   return (
     <div className={styled.buttons}>
@@ -15,5 +16,9 @@ const Feedback = ({ options, onLeaveFeedback }) => {
       ))}
     </div>
   );
+};
+Feedback.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 export default Feedback;
